@@ -67,6 +67,23 @@ VALUES ('Kristiine','56475824', 'kristiine@gmail.com', 'Endla', 'Tallinn', 'Harj
 <img width="594" height="110" alt="{DAEE475B-F94D-461E-A633-796866B0BD1C}" src="https://github.com/user-attachments/assets/eb1e5ea7-33f3-45ae-bd04-6e9f57e74f14" />
 
 
+--5.stocks
+CREATE TABLE stocks(
+store_id int,
+product_id int,
+PRIMARY KEY(store_id, product_id),
+FOREIGN KEY (store_id) references stores(store_id),
+FOREIGN KEY (product_id) references products(product_id),
+quantity int);
+
+SELECT * FROM stocks;
+
+INSERT INTO stocks
+VALUES (2, 1, 5);
+```
+<img width="217" height="101" alt="pilt" src="https://github.com/user-attachments/assets/0e08b66d-4a07-45f7-94c0-99a48e4621cd" />
+
+
 
 ```SQL
 --6.customers
@@ -133,10 +150,24 @@ VALUES (3, 'incomplete', '2026-04-25','2026-05-18','2026-04-29',2,1);
 <img width="589" height="80" alt="{3BC6D0F2-29BA-46E2-8625-F0FB86B3C02D}" src="https://github.com/user-attachments/assets/75a36dd0-882a-411b-8d18-ced9da03c096" />
 
 
+```SQL
+--9.order_items
+CREATE TABLE order_items(
+order_id int,
+item_id int, 
+PRIMARY KEY (order_id,item_id),
+product_id int,
+FOREIGN KEY (product_id) references products(product_id),
+quantity int,
+list_price money,
+discount int,
+FOREIGN KEY (order_id) references orders(order_id));
 
+SELECT * FROM order_items;
 
+INSERT INTO order_items
+VALUES (4, 2, 3, 50,500,10);
+```
+<img width="375" height="124" alt="pilt" src="https://github.com/user-attachments/assets/c3964e18-8f2d-4037-b3c7-fac0ff3d8098" />
 
-
-
-
-
+<img width="681" height="732" alt="{D26B6174-190C-42E5-B011-F09F0A829308}" src="https://github.com/user-attachments/assets/6f568057-e01f-4a26-9534-8cad2a7b7430" />
