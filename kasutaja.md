@@ -59,16 +59,14 @@ Kasutaja õiguste kontroll
 <img width="466" height="502" alt="{19BF020E-1656-4B12-A468-7A437D00602F}" src="https://github.com/user-attachments/assets/89ae2f15-b95a-4fc1-995a-8c59d4cdf01e" />
 
 
-
-
     2. saab tabeli sisu näha ja sisestada uus kiri. 
 
+<img width="785" height="378" alt="{29AAE034-1455-4AA0-AE39-40BB66002C46}" src="https://github.com/user-attachments/assets/1193f159-069c-42ea-8eda-b7b7e6f20d9f" />
 
 
     3. kontrollime tegevus, mis ei ole lubatud kasutajale, näiteks tabeli loomine.
 
-
-
+<img width="681" height="259" alt="{38ADBD11-4CEC-4BB2-8C6B-7167C6403BCE}" src="https://github.com/user-attachments/assets/55b8b36b-4134-4696-917e-0e19c7e37f45" />
 
     
 
@@ -96,8 +94,12 @@ GRANT SELECT ON puhkus TO directorLiisa;
 DENY INSERT ON puhkus TO directorLiisa;
 
 
+<img width="811" height="546" alt="{EA3F706E-507A-49E7-B573-527F372DE904}" src="https://github.com/user-attachments/assets/04bf3a67-ec2e-4d9f-b3c6-e8219fa67b3d" />
+
+
 SELECT Lugemine INSERT Lisamine UPDATE Muutmine DELETE Kustutamine
 
+<img width="884" height="567" alt="{86D7F8CC-19BA-4264-A1B0-71958CAFB5C1}" src="https://github.com/user-attachments/assets/dca4e790-7879-41ab-8991-b7d37719ffe9" />
 
 
 
