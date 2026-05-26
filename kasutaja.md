@@ -56,7 +56,54 @@ Kasutaja õiguste kontroll
 
     1. tuleb sisselogida kasutajana directorAnastassia. Connect--> Database Engine
 
-<img width="467" height="334" alt="{08ED817F-87E1-4208-8AC8-62CBFE439D65}" src="https://github.com/user-attachments/assets/17f4f127-5763-439d-92ae-6a22e222323c" />
+<img width="466" height="502" alt="{19BF020E-1656-4B12-A468-7A437D00602F}" src="https://github.com/user-attachments/assets/89ae2f15-b95a-4fc1-995a-8c59d4cdf01e" />
+
+
+
+
+    2. saab tabeli sisu näha ja sisestada uus kiri. 
+
+
+
+    3. kontrollime tegevus, mis ei ole lubatud kasutajale, näiteks tabeli loomine.
+
+
+
+
+    
+
+#### SQL Server Authentication Mode muutmine
+Kui ilmub viga: Error 18456, siis on tavaliselt lubatud ainult Windows Authentication.
+Lahendus: Server → Properties -->
+Security
+ Vali: SQL Server and Windows Authentication mode
+
+--GRANT - õiguste määramine
+--DENY - õiguste keelamine
+
+--db_datareader -SELECT 
+--db_datawriter - INSERT, DELETE, UPDATE
+
+--anname kasutajale directorIrina õigus 
+--ainult kustutada ja uuendada tabelit 
+--(DELETE, UPDATE, SELECT)
+
+GRANT DELETE ON puhkus TO directorLiisa;
+GRANT UPDATE ON puhkus TO directorLiisa;
+GRANT SELECT ON puhkus TO directorLiisa;
+
+--keelame INSERT
+DENY INSERT ON puhkus TO directorLiisa;
+
+
+SELECT Lugemine INSERT Lisamine UPDATE Muutmine DELETE Kustutamine
+
+
+
+
+
+
+
 
 
 
