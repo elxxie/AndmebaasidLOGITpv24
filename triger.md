@@ -126,6 +126,9 @@ deny select, delete on logi to sekretaarLiisa;
 
 <img width="521" height="593" alt="{03AFCC1F-99A3-4C69-A77A-62E2DC5CC30B}" src="https://github.com/user-attachments/assets/03b7fdd7-4d1d-4790-ae52-e29d65428158" />
 
+<img width="1073" height="620" alt="{788F29F9-3BDD-4851-A913-2C29451F8E02}" src="https://github.com/user-attachments/assets/9c646af4-7710-4ca2-9747-e0941a69abb3" />
+
+
 
 <img width="526" height="571" alt="{05FC89F5-9FB0-4BB6-A8B8-B768DE286078}" src="https://github.com/user-attachments/assets/63edca50-084d-4c1e-b6f5-1c32820867da" />
 
