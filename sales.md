@@ -1,3 +1,6 @@
+[Põhimõisted](README.md) | [Kasutajad](kasutaja.md) | [ Trigerid](triger.md) | [Protseduurid](protseaduurid.md) | [Sales](sales.md) | [Võtmed/Keys](kodutoo)
+
+
 ```SQL
 --1.categories
 create table categories(
