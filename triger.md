@@ -18,6 +18,8 @@ GETDATE(),  --aeg
 inserted.linnanimi  --andmed
 FROM inserted;
 ```
+<img width="706" height="392" alt="image" src="https://github.com/user-attachments/assets/b7133574-2a00-4f02-9b5b-6f3491cc2821" />
+
 
 ## Triger DELETE
 ```sql
