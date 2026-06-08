@@ -8,7 +8,6 @@ opilase_id INT PRIMARY KEY,
 nimi VARCHAR(50));
 ```
 <img width="283" height="92" alt="image" src="https://github.com/user-attachments/assets/2c0c60e5-8129-4ec6-b5da-c3b539257b78" />
-"opilase_id" on peavõti.
 
 Primaarvõti opilase_id identifitseerib õpilase üheselt.
 
