@@ -1,7 +1,7 @@
 ## AndmebaasidLOGITpv24
 andmebaaside haldusega seotud sql kood ja konspektid
 
-[Põhimõisted](README.md) | [Kasutajad](kasutaja.md) | [ Trigerid](triger.md) | [Protseduurid](protseduurid.md) | [Sales](sales.md) | [Võtmed/Keys](kodutoo)
+[Põhimõisted](README.md) | [Kasutajad](kasutaja.md) | [ Trigerid](triger.md) | [Protseduurid](protseduurid.md) | [Sales](sales.md) | [Võtmed/Keys](keys.md)
 
 ## Sisukord
 - [Põhimõisted](#põhimõisted)
