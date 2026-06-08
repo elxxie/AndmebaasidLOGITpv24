@@ -19,9 +19,6 @@ inserted.linnanimi  --andmed
 FROM inserted;
 ```
 
-<img width="790" height="402" alt="{E0B7A8EE-FA97-436D-B256-B18277132AAF}" src="https://github.com/user-attachments/assets/5d7395b7-b661-4e23-b2d5-57abd953eba1" />
-
-
 ## Triger DELETE
 ```sql
 CREATE TRIGGER linnaKustutamine
