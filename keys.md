@@ -27,7 +27,7 @@ create table auto(
 auto_id int identity(1,1) primary key,
 number varchar(50) unique);
 ```
-<img width="320" height="160" alt="image" src="https://github.com/user-attachments/assets/dffc1450-7787-480a-99a4-3fec7b896b27" />
+<img width="323" height="133" alt="image" src="https://github.com/user-attachments/assets/0db5c956-6c96-4337-9432-7295185dcf55" />
 
 ## 4. Simple Key
 See on mis tahes võti (primary, foreign, unique), mis koosneb täpselt ühest veerust.
@@ -36,7 +36,7 @@ create table opetajad(
 opetaja_id int primary key, 
 eesnimi varchar(50));
 ```
-<img width="302" height="101" alt="image" src="https://github.com/user-attachments/assets/fd510cd2-7152-44a6-b365-3c55ff48f2a8" />
+<img width="347" height="136" alt="image" src="https://github.com/user-attachments/assets/803db29a-e191-4111-aada-4fa920c9cedf" />
 
 ## 5. Composite Key
 See on võti, mis koosneb kahest või enamast veerust, mis ainult koos pakuvad unikaalsust.
@@ -48,7 +48,8 @@ kuupaev date,
 primary key (opilase_id, opetaja_id, kuupaev)
 );
 ```
-<img width="317" height="122" alt="image" src="https://github.com/user-attachments/assets/a92312cd-83c8-4779-84fe-ea8c343a6e6f" />
+<img width="340" height="161" alt="image" src="https://github.com/user-attachments/assets/319cdd85-ec8a-4100-a621-4f18bcc7defa" />
+
 
 
 
