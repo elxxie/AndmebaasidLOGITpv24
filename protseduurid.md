@@ -13,7 +13,7 @@ select * from categories;
 
 ### Protseduur mis lisab andmeid tabelisse ja kohe kuvab neid
 create procedure lisaKategooria
-
+@uusKategooria varchar(36)
 as
 begin
 --kirjeldus
@@ -25,6 +25,8 @@ end
 --kutse
 exec lisaKategooria 'Auto'
 ```
+<img width="263" height="243" alt="{6EC6A1A6-60B1-4E27-BE17-A128CB295738}" src="https://github.com/user-attachments/assets/bff07394-db02-4e01-9819-0062dd275a21" />
+
 ### Protseduur, mis kustutab kategooria id
 ```sql
 create procedure kustutaKategooria
@@ -69,6 +71,7 @@ end
 --kutse
 exec lisaKategooria 'Auto'
 ```
+
 
 ### Protseduur, mis kustutab kategooria id
 ```sql
