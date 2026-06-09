@@ -11,7 +11,7 @@ insert into categories(category_name)
 
 select * from categories;
 
---protseduur mis lisab andmeid tabelisse ja kohe kuvab neid
+### Protseduur mis lisab andmeid tabelisse ja kohe kuvab neid
 create procedure lisaKategooria
 
 as
