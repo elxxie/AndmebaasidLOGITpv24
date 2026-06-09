@@ -1,5 +1,4 @@
-[Põhimõisted](README.md) | [Kasutajad](kasutaja.md) | [ Trigerid](triger.md) | [Protseduurid](protseaduurid.md) | [Sales](sales.md) | [Võtmed/Keys](kodutoo)
-
+[Põhimõisted](README.md) | [Kasutaja](kasutaja.md) | [ Trigerid](triger.md) | [Protseduurid](protseduurid.md) | [Sales](sales.md) | [Võtmed/Keys](keys.md) | [Foorum ülesanne](foorum.md) | [Retseptiraamat](retseptiraamat.md)
 
 ```SQL
 --1.categories
