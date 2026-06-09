@@ -225,9 +225,67 @@ BEGIN
 	SELECT * FROM kommentaar;
 END;
 ```
-<img width="395" height="162" alt="{2185514F-B051-4637-B8ED-0DB8366C6797}" src="https://github.com/user-attachments/assets/cbe1da04-5163-44d8-918f-b41c6c59596f" />
+<img width="340" height="212" alt="{60B4941E-D449-477F-B000-5381858ECE64}" src="https://github.com/user-attachments/assets/c90c0e6c-ef23-4854-8624-1535330824fc" />
 
 ### Protseduur kustutamine
+```sql
+CREATE PROCEDURE kustutaKommentaar
+@id INT
+AS
+BEGIN
+	DELETE FROM kommentaar
+	WHERE kommentaar_id=@id;
+	SELECT * FROM kommentaar;
+END;
+```
+<img width="268" height="204" alt="{79A57107-F8A0-4CE0-97B2-C02CA7E7497D}" src="https://github.com/user-attachments/assets/7384cfa3-3c66-42c1-8993-7f546f29e376" />
 
+## Kasutaja Staff õigused
+### 1. Omab ligipääsu tabelitele: toiduaine, kategooria, kasutaja
+```sql
+GRANT SELECT ON kasutaja TO staff;
+GRANT SELECT ON toiduaine TO staff;
+GRANT SELECT ON kategooria TO staff;
+```
+
+### 2. Tohib lisada ja vaadata toiduaineid ja kategooriaid
+```sql
+GRANT INSERT ON toiduaine TO staff;
+GRANT INSERT ON kategooria TO staff;
+```
+
+### 3. Ei tohi muuta ega kustutada toiduaineid ja kategooriaid
+```sql
+DENY UPDATE, DELETE ON toiduaine TO staff;
+DENY UPDATE, DELETE ON kategooria TO staff;
+```
+
+### 4. Tabelis kasutaja on lubatud ainult vaatamine
+```sql
+DENY INSERT, UPDATE, DELETE ON kasutaja TO staff;
+```
+
+## Kasutaja Manager õigused
+## 1. Omab ligipääsu kõigile tabelitele
+```sql
+GRANT SELECT ON kasutaja TO manager;
+GRANT SELECT ON toiduaine TO manager;
+GRANT SELECT ON kategooria TO manager;
+GRANT SELECT ON yhik TO manager;
+GRANT SELECT ON tehtud TO manager;
+GRANT SELECT ON kommentaar TO manager;
+```
+
+### 2. Ei tohi lisada uusi toiduaineid (toiduaine) ega uusi kasutajaid (kasutaja)
+```sql
+DENY INSERT ON kasutaja TO manager;
+DENY INSERT ON toiduaine TO manager;
+```
+
+### 3. Omab täielikku haldusõigust retseptidega seotud tabelites (retsept ja koostis)
+```sql
+GRANT SELECT, INSERT, UPDATE, DELETE ON retsept TO manager;
+GRANT SELECT, INSERT, UPDATE, DELETE ON koostis TO manager;
+```
 
 
