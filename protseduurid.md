@@ -120,6 +120,7 @@ EXEC minmaxHind @minHind OUTPUT, @maxHind OUTPUT;
 PRINT 'Min hind = ' + CONVERT(varchar, @minHind);
 PRINT 'Max hind = ' + CONVERT(varchar, @maxHind);
 ```
+
 <img width="472" height="270" alt="{097ED3CC-4598-4062-983F-20F5A63914DF}" src="https://github.com/user-attachments/assets/ba9d186d-f959-4b9d-b713-727823189225" />
 
 
