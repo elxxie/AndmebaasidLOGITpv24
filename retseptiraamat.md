@@ -186,4 +186,48 @@ END;
 ```
 <img width="541" height="231" alt="{92302230-84BC-40CA-A598-51EDD2E1A597}" src="https://github.com/user-attachments/assets/dc8c4be4-8510-4885-aa9d-c976a06e511e" />
 
-## Protsedure 
+## Select
+### 1. Päring kuvab kasutaja eesnime, perekonnanime ja tema retseptide nimetused.
+```sql
+SELECT kasutaja.eesnimi, kasutaja.perenimi, retsept.retsepti_nimi FROM kasutaja, retsept
+WHERE kasutaja.kasutaja_id=retsept.kasutaja_id;
+```
+<img width="764" height="171" alt="{5D660DD7-48B3-4C48-B559-649FFAE9C7F5}" src="https://github.com/user-attachments/assets/8e1d328e-99d2-4db2-ad2e-4dec8b4b9f23" />
+
+### 2. Päring kuvab retsepti nimetuse ja sellele vastava kategooria.
+```sql
+SELECT retsept.retsepti_nimi,kategooria.kategooria_nimi FROM retsept, kategooria
+WHERE retsept.kategooria_id=kategooria.kategooria_id;
+```
+<img width="702" height="184" alt="{04DF4058-FA01-4B58-A30E-D96C7EB939DA}" src="https://github.com/user-attachments/assets/9ad9d388-e4b4-401c-9ef5-b15eec8ae3a0" />
+
+### 3. Päring kuvab koostises kasutatud toiduained ja nende kogused.
+<img width="621" height="209" alt="{8C37DADC-B81D-45F0-8550-57BA3C285F51}" src="https://github.com/user-attachments/assets/95a10b07-ce87-44c2-9ecb-5b63329a1a61" />
+
+## Too lisamine
+### kommentaar table
+```sql
+CREATE TABLE kommentaar(
+kommentaar_id INT IDENTITY(1,1) PRIMARY KEY,
+tekst VARCHAR(200),
+retsept_id INT,
+FOREIGN KEY(retsept_id) REFERENCES retsept(retsept_id));
+```
+### Protseduur lisamine
+```sql
+CREATE PROCEDURE lisaKommentaar
+@tekst VARCHAR(200),
+@retsept INT
+AS
+BEGIN
+	INSERT INTO kommentaar
+	VALUES(@tekst,@retsept);
+	SELECT * FROM kommentaar;
+END;
+```
+<img width="395" height="162" alt="{2185514F-B051-4637-B8ED-0DB8366C6797}" src="https://github.com/user-attachments/assets/cbe1da04-5163-44d8-918f-b41c6c59596f" />
+
+### Protseduur kustutamine
+
+
+
