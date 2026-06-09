@@ -1,4 +1,4 @@
-
+[Põhimõisted](README.md) | [Kasutaja](kasutaja.md) | [ Trigerid](triger.md) | [Protseduurid](protseduurid.md) | [Sales](sales.md) | [Võtmed/Keys](keys.md) | [Retseptiraamat](retseptiraamat.md)
 ## 1. Taabelid
 ```sql
 --Taabel kasutaja
