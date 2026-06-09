@@ -1,4 +1,7 @@
 ## SQL protseduur
+
+[Põhimõisted](README.md) | [Kasutaja](kasutaja.md) | [ Trigerid](triger.md) | [Protseduurid](protseduurid.md) | [Sales](sales.md) | [Võtmed/Keys](keys.md) | [Foorum ülesanne](foorum.md) | [Retseptiraamat](retseptiraamat.md)
+
 ### store procedure - salvestatud protseduur - sama mis on funktsioonid programmerimises, mingi tegevus, mis on salvestatud andmebaasi, ja mida saab automaatsel teha (INSERT, SELECT, UPDATE).
 
 ### 1. categories
