@@ -1,6 +1,6 @@
 # Trigger - päästik
 
-[Põhimõisted](README.md) | [Kasutaja](kasutaja.md) | [ Trigerid](triger.md) | [Protseduurid](protseduurid.md) | [Sales](sales.md) | [Võtmed/Keys](keys.md) | [Foorum ülesanne](foorum.md) | [Retseptiraamat](retseptiraamat.md)
+[Põhimõisted](README.md) | [Kasutaja](kasutaja.md) | [ Trigerid](triger.md) | [Protseduurid](protseduurid.md) | [Sales](sales.md) | [Võtmed/Keys](keys.md) | [Retseptiraamat](retseptiraamat.md)
 
 ## SQL triggerid on spetsiaalsed andmebaasi objektid, mis käivituvad automaatselt, kui toimub teatud sündmus (nt INSERT, UPDATE või DELETE).
 
