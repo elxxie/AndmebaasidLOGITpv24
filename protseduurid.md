@@ -1,10 +1,8 @@
 ## SQL protseduur
-store procedure - salvestatud protseduur - sama mis on funktsioonid programmerimises, mingi tegevus, mis on salvestatud andmebaasi, ja mida saab automaatsel teha (INSERT, SELECT, UPDATE).
+### store procedure - salvestatud protseduur - sama mis on funktsioonid programmerimises, mingi tegevus, mis on salvestatud andmebaasi, ja mida saab automaatsel teha (INSERT, SELECT, UPDATE).
 
-create database protseduuridIlnitskaya;
-use protseduuridIlnitskaya;
-
---1. categories
+### 1. categories
+```sql
 create table categories(
 category_id int primary key identity(1,1),
 category_name varchar(25) unique);
@@ -26,8 +24,9 @@ end
 
 --kutse
 exec lisaKategooria 'Auto'
-
---protseduur, mis kustutab kategooria id
+```
+### Protseduur, mis kustutab kategooria id
+```sql
 create procedure kustutaKategooria
 @kustutaKategooria int
 as
@@ -39,7 +38,8 @@ end
 
 --kutse
 exec kustutaKategooria 1
-
+```
+```sql
 --protseduur, mis kuvab kategooriad sisestatud tähe jargi
 create procedure otsing1taht
 @taht char(1)
@@ -49,41 +49,13 @@ begin
 	where category_name like @taht + '%'; --% - teised sümbolid
 end
 
-<img width="222" height="82" alt="{01B063A0-C547-4DD6-A829-FDE8F8842ED0}" src="https://github.com/user-attachments/assets/7e27c28f-97c6-4779-a6ab-7470ed01571d" />
-
-
 --kutse
 exec otsing1taht 'Auto2';
+```
+<img width="222" height="82" alt="{01B063A0-C547-4DD6-A829-FDE8F8842ED0}" src="https://github.com/user-attachments/assets/7e27c28f-97c6-4779-a6ab-7470ed01571d" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-create database protseduuridIlnitskaya;
-use protseduuridIlnitskaya;
-
---1. categories
-create table categories(
-category_id int primary key identity(1,1),
-category_name varchar(25) unique);
-
-insert into categories(category_name) 
-values (1)
-
-select * from categories;
-
---protseduur mis lisab andmeid tabelisse ja kohe kuvab neid
+### Protseduur mis lisab andmeid tabelisse ja kohe kuvab neid
+```sql
 create procedure lisaKategooria
 @uusKategooria varchar(36)
 as
@@ -94,11 +66,12 @@ begin
 	select * from categories;
 end
 
-
 --kutse
 exec lisaKategooria 'Auto'
+```
 
---protseduur, mis kustutab kategooria id
+### Protseduur, mis kustutab kategooria id
+```sql
 create procedure kustutaKategooria
 @kustutaKategooria int
 as
@@ -110,8 +83,10 @@ end
 
 --kutse
 exec kustutaKategooria 1
+```
 
---protseduur, mis kuvab kategooriad sisestatud tähe jargi
+### Protseduur, mis kuvab kategooriad sisestatud tähe jargi
+```sql
 create procedure otsing1taht
 @taht char(1)
 as
@@ -122,16 +97,18 @@ end
 
 --kutse
 exec otsing1taht 'A';
-
-
+```
+### Brands
+```sql
 CREATE TABLE brands(
 brand_id int PRIMARY KEY identity(1,1),
 brand_name varchar(15) UNIQUE);
 
 INSERT INTO brands(brand_name)
 VALUES ('Samsung');
-
-
+```
+### Products
+```sql
 Create TABLE products(
 product_id int PRIMARY KEY identity(1,1),
 product_name varchar(50) not null,
@@ -146,8 +123,10 @@ select * from products;
 
 insert into products
 values ('Iphone 13', 1, 2, 2023, 400);
+```
 
---protseduur, mis kuvab tooded, kus on hind suurem kui sisestatud hind
+### Protseduur, mis kuvab tooded, kus on hind suurem kui sisestatud hind
+```sql
 create procedure suuremHind
 @hind int
 as
@@ -179,8 +158,10 @@ EXEC minmaxHind @minHind OUTPUT, @maxHind OUTPUT;
 
 PRINT 'Min hind = ' + CONVERT(varchar, @minHind);
 PRINT 'Max hind = ' + CONVERT(varchar, @maxHind);
+```
 
---6. Dünaamiline SQL protseduuris (ALTER TABLE)
+### 6. Dünaamiline SQL protseduuris (ALTER TABLE)
+```sql
 CREATE PROCEDURE muudatus
     @tegevus varchar(10),
     @tabelinimi varchar(25),
@@ -207,7 +188,7 @@ exec muudatus 'add', 'categories', 'testVeerg', 'int'
 select * from categories
 
 exec muudatus 'drop', 'categories', 'testVeerg'
-
+```
 
 
 
