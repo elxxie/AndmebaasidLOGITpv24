@@ -41,8 +41,10 @@ end
 --kutse
 exec kustutaKategooria 1
 ```
+<img width="297" height="369" alt="{C8893EA7-AA3A-4C56-A3CD-A90DEAD41880}" src="https://github.com/user-attachments/assets/abadecc5-6bca-4c70-bc9c-29e56fe72bdd" />
+
+### Protseduur, mis kuvab kategooriad sisestatud tähe jargi
 ```sql
---protseduur, mis kuvab kategooriad sisestatud tähe jargi
 create procedure otsing1taht
 @taht char(1)
 as
@@ -56,51 +58,6 @@ exec otsing1taht 'Auto2';
 ```
 <img width="222" height="82" alt="{01B063A0-C547-4DD6-A829-FDE8F8842ED0}" src="https://github.com/user-attachments/assets/7e27c28f-97c6-4779-a6ab-7470ed01571d" />
 
-### Protseduur mis lisab andmeid tabelisse ja kohe kuvab neid
-```sql
-create procedure lisaKategooria
-@uusKategooria varchar(36)
-as
-begin
---kirjeldus
-	Insert into categories(category_name)
-	values (@uusKategooria);
-	select * from categories;
-end
-
---kutse
-exec lisaKategooria 'Auto'
-```
-
-
-### Protseduur, mis kustutab kategooria id
-```sql
-create procedure kustutaKategooria
-@kustutaKategooria int
-as
-begin
-	select * from categories;
-	delete from categories where category_id=@kustutaKategooria;
-	select * from categories;
-end
-
---kutse
-exec kustutaKategooria 1
-```
-
-### Protseduur, mis kuvab kategooriad sisestatud tähe jargi
-```sql
-create procedure otsing1taht
-@taht char(1)
-as
-begin
-	Select * from categories
-	where category_name like @taht + '%'; --% - teised sümbolid
-end
-
---kutse
-exec otsing1taht 'A';
-```
 ### Brands
 ```sql
 CREATE TABLE brands(
@@ -140,8 +97,9 @@ end;
 
 --kutse
 exec suuremHind 1000;
-
-
+```
+<img width="475" height="178" alt="{53FBC0F2-62F8-43AB-8089-C7A041F86FFF}" src="https://github.com/user-attachments/assets/21445098-ade5-47e3-bd8c-9fb130cb37a2" />
+```sql
 --OUTPUT parameetr
 CREATE PROCEDURE minmaxHind
     @minHind MONEY OUTPUT,
@@ -162,6 +120,8 @@ EXEC minmaxHind @minHind OUTPUT, @maxHind OUTPUT;
 PRINT 'Min hind = ' + CONVERT(varchar, @minHind);
 PRINT 'Max hind = ' + CONVERT(varchar, @maxHind);
 ```
+<img width="472" height="270" alt="{097ED3CC-4598-4062-983F-20F5A63914DF}" src="https://github.com/user-attachments/assets/ba9d186d-f959-4b9d-b713-727823189225" />
+
 
 ### 6. Dünaamiline SQL protseduuris (ALTER TABLE)
 ```sql
@@ -192,6 +152,8 @@ select * from categories
 
 exec muudatus 'drop', 'categories', 'testVeerg'
 ```
+<img width="508" height="377" alt="{CBE7F0FB-98AB-47AE-A9A1-A8C4F7E3095A}" src="https://github.com/user-attachments/assets/b2193315-c9c0-4ece-aea5-1143d3126f14" />
+<img width="521" height="287" alt="{7A7284C1-0598-4A89-AEAF-7BC1D82BAB41}" src="https://github.com/user-attachments/assets/5faa768c-c52f-47ba-a2e3-b5ca7e1bdb2f" />
 
 
 
