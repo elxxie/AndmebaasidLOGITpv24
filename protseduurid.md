@@ -99,8 +99,9 @@ end;
 exec suuremHind 1000;
 ```
 <img width="475" height="178" alt="{53FBC0F2-62F8-43AB-8089-C7A041F86FFF}" src="https://github.com/user-attachments/assets/21445098-ade5-47e3-bd8c-9fb130cb37a2" />
+
+### OUTPUT parameetr
 ```sql
---OUTPUT parameetr
 CREATE PROCEDURE minmaxHind
     @minHind MONEY OUTPUT,
     @maxHind MONEY OUTPUT
