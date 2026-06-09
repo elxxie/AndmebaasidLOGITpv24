@@ -288,4 +288,64 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON retsept TO manager;
 GRANT SELECT, INSERT, UPDATE, DELETE ON koostis TO manager;
 ```
 
+## Staff kontroll
+```sql
+USE retseptiraamat;
+
+INSERT INTO toiduaine
+VALUES ('test1');
+```
+<img width="411" height="236" alt="{B55457B4-ECCD-4C87-8977-686D072B8C09}" src="https://github.com/user-attachments/assets/7d1394b9-6a30-4701-88dd-503bf3080222" />
+
+```sql
+SELECT * FROM kasutaja;
+```
+
+<img width="371" height="309" alt="{C0F36857-4BB9-4CE9-B7F7-424403586413}" src="https://github.com/user-attachments/assets/9fe2f50b-8008-4e0b-aafc-1df4b438ca80" />
+
+```sql
+UPDATE toiduaine SET toiduaine_nimi='Test'
+WHERE toiduaine_id=1;
+```
+
+<img width="736" height="220" alt="{84266FD4-F2F9-410A-8683-F78B6CE7F558}" src="https://github.com/user-attachments/assets/b38e140c-daf5-45e0-a12f-c3a211d7bcb1" />
+
+```sql
+DELETE FROM kategooria
+WHERE kategooria_id=1;
+```
+
+<img width="828" height="219" alt="{F824A00E-F15F-4D2E-AD5F-96FD55523A1A}" src="https://github.com/user-attachments/assets/a47980c9-7a2f-4e06-ab0c-7c1264917529" />
+
+## Kasutaja Manager kontroll
+```sql
+USE retseptiraamat;
+
+Insert INTO retsept
+VALUES ('Test','Test','Test','2026-01-01',4,4);
+```
+<img width="416" height="207" alt="{FB1722F6-B776-41EB-83CE-8BB2A2B50210}" src="https://github.com/user-attachments/assets/7ee88e73-ebe9-4aa0-b643-de770ede7998" />
+
+```sql
+SELECT * FROM retsept;
+```
+
+<img width="651" height="281" alt="{DC5F4876-536E-4F54-9084-6415C2C65059}" src="https://github.com/user-attachments/assets/2b44b661-cae6-4fc6-a078-8ce91701df5f" />
+
+```sql
+INSERT INTO kasutaja
+VALUES('Test','Test','Test@gmail.com');
+```
+
+<img width="742" height="232" alt="{4ABDD4D2-08CF-4C16-9DE7-02C4D339E526}" src="https://github.com/user-attachments/assets/f8ea7e43-9a24-486b-89f7-44d392d32c81" />
+
+
+```sql
+INSERT INTO toiduaine
+VALUES('Test');
+```
+
+<img width="783" height="185" alt="{5E573CF9-007E-4B27-B46F-86CAD6A7F913}" src="https://github.com/user-attachments/assets/15c2818f-f52a-4436-81ee-369f460c23df" />
+
+
 
